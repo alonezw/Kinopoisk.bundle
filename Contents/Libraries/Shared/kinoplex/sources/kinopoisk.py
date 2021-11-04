@@ -273,7 +273,8 @@ class KinopoiskSource(SourceBase):
             metadata['original_title'] = movie_data['nameOriginal']
 
         metadata['tagline'] = movie_data.get('slogan', '')
-        metadata['content_rating_age'] = int(movie_data.get('ratingAgeLimits').replace('age', '') or 0)
+        if movie_data.get('ratingAgeLimits'):
+            metadata['content_rating_age'] = int(movie_data.get('ratingAgeLimits').replace('age', '') or 0)
         try:
             metadata['year'] = int(movie_data.get('year', ''))
         except:
