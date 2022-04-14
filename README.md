@@ -45,6 +45,8 @@ sudo systemctl restart plexmediaserver
 
 Пути расположения папки с плагинами других систем ищите на официальном сайте [Plex.TV](https://support.plex.tv/articles/202915258-where-is-the-plex-media-server-data-directory-located/)
 
+> Должна получиться папка вида `{some os specific folder}/Plex Media Server/Plug-ins/Kinopoisk.bundle`, а внутри папка `Contents`. Тогда в настройках Plex появится настройка плагина куда нужно будет ввести API-ключ (см ниже)
+
 ## Возможности
 1. Загрузка рейтингов для фильмов
 + Kinopoisk
