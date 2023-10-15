@@ -327,7 +327,7 @@ class KinopoiskSource(SourceBase):
             if self.api.Prefs['desc_rating_vote_count'] and movie_data.get('ratingImdbVoteCount'):
                 summary_add += ' (%s)' % movie_data.get('ratingImdbVoteCount')
             summary_add += '\n' if self.api.Prefs['desc_rating_newline'] else '. '
-        metadata['summary'] = summary_add + movie_data.get('description', '')
+        metadata['summary'] = summary_add + (movie_data.get('description', '') or '')
         
         metadata['main_poster'] = {
             'full': movie_data.get('posterUrl'),
